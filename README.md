@@ -3,11 +3,6 @@
 
 VoiceLedger AI is a mobile-first accounting solution designed for shopkeepers and individuals who find manual bookkeeping tedious. Using Google Gemini 2.5 Flash, it turns simple voice notes and photos of receipts into structured financial records.
 
-## 🚀 Try It Out
-- **Live Demo (Expo Snack):** [Link here]
-- **Video Walkthrough:** [Link here]
-- **GitHub:** [Link here]
-
 ## ✨ Key Features
 - **Voice-First Interaction:** Simply hold the mic and speak. "Sold bread for 100" or "Paid 500 to Ali."
 - **AI Context Logic:** The app intelligently distinguishes between **Sale (+)** (Income/Earnings) and **Debt (-)** (Spending/Giving money).
