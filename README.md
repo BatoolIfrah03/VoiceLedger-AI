@@ -28,4 +28,4 @@ VoiceLedger AI is a mobile-first accounting solution designed for shopkeepers an
 ## ⚙️ Installation & Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/VoiceLedger-AI.git
+   git clone https://github.com/BatoolIfrah03/VoiceLedger-AI.git
