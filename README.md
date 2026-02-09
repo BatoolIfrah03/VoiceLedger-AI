@@ -1,31 +1,22 @@
-# VoiceLedger AI 🎙️💰
-**A Zero-Typing Smart Financial Ledger for Small Businesses.**
-
-VoiceLedger AI is a mobile-first accounting solution designed for shopkeepers and individuals who find manual bookkeeping tedious. Using Google Gemini 2.5 Flash, it turns simple voice notes and photos of receipts into structured financial records.
-
-## ✨ Key Features
-- **Voice-First Interaction:** Simply hold the mic and speak. "Sold bread for 100" or "Paid 500 to Ali."
-- **AI Context Logic:** The app intelligently distinguishes between **Sale (+)** (Income/Earnings) and **Debt (-)** (Spending/Giving money).
-- **AI Bill Scanner:** Snap a photo of any receipt, and the AI extracts the total amount automatically.
-- **API Key Rotation:** Built-in system that cycles through 5 different API keys to bypass free-tier quota limits (429 errors).
-- **Multi-Currency Support:** Tailored for Pakistan (PKR), USA (USD), and India (INR) with localized language understanding (Urdu/Hindi mix).
-- **Local Database:** Uses `AsyncStorage` to keep your financial data safe on your device.
-- **Fully Accessible:** High-contrast UI with full Screen Reader support (`accessibilityLabels`).
-
-## 🛠️ Tech Stack
-- **Frontend:** React Native & Expo
-- **AI Brain:** Google Gemini 2.5 Flash API (Multimodal)
-- **Icons:** Lucide React Native
-- **Storage:** React Native AsyncStorage
-- **Audio/Vision:** Expo-AV & Expo-Image-Picker
-
-## 🧠 How It Works (The Logic)
-1. **The Voice Input:** `expo-av` records audio and converts it to Base64.
-2. **The AI Prompt:** We send the audio/image to Gemini with a strict system instruction: 
-   *"If user SOLD or EARNED, type is 'sale'. If user GAVE or SPENT, type is 'debt'. Return JSON ONLY."*
-3. **The Data:** The app parses the JSON, updates the "Lifetime Wallet Balance," and stores it locally.
-
-## ⚙️ Installation & Setup
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/BatoolIfrah03/VoiceLedger-AI.git
+## Inspiration
+Many small shopkeepers and daily earners find it hard to type every single transaction into a phone. They often use old paper diaries which are easy to lose. I wanted to build something as fast as speaking like a "digital diary" that understands local languages and helps people manage their money without needing to be tech-experts.
+## What it does
+VoiceLedger AI is a smart money tracker. Instead of typing, you just hold a button and speak.
+Voice Tracking: Say "Sold a shirt for 500" or "Paid 200 for tea" in English, Hindi, or Urdu.
+Scan Receipts: Use the camera to scan a bill, and the AI finds the total automatically.
+Smart Balance: It calculates your "Lifetime Balance" and shows daily sales (+) and debts (-).
+Multi-Region: Works perfectly for users in Pakistan, India, and the USA with correct currency symbols.
+## How we built it
+The app is built using React Native and Expo.
+AI Brain: We used the Gemini 2.5 Flash model to process both audio and images.
+Audio: We used expo-av to record high-quality voice clips.
+Data Storage: All transactions are saved locally on the phone using AsyncStorage so the data stays private.
+Key Rotation: To keep the app free and reliable, we built a custom system to rotate between multiple API keys if one hits a limit.
+## Challenges we ran into
+The biggest challenge was making the AI understand mixed languages (like "Hinglish" or "Urdu-English"). We had to carefully design the "System Prompt" to ensure the AI always returns a clean JSON format. Handling high-quality audio files and converting them to Base64 for the AI to read was also a technical hurdle.
+## Accomplishments that we're proud of
+We are proud of the "One-Tap" experience. A user can record a transaction in under 3 seconds. We also successfully implemented a visual "Pulse" animation and a "Toast" error system that makes the app feel professional and alive.
+## What we learned
+I learned how to use Multimodal AI, which means using one AI model to handle voice, text, and photos at the same time. I also learned a lot about mobile accessibility and how to manage app state for a smooth user experience.
+## What's next for VoiceLedger AI: Speak to Track Your Money
+We want to add PDF Reports so users can print their monthly sales. We also plan to add "Offline Mode" using local on-device speech-to-text and a "Monthly Analytics" screen to show spending charts.
