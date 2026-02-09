@@ -12,10 +12,11 @@ import {
   Calendar as CalIcon, Info, ChevronLeft, 
   ChevronRight, TrendingUp, TrendingDown, AlertCircle 
 } from 'lucide-react-native';
+import { GEMINI_KEY_1, GEMINI_KEY_2, GEMINI_KEY_3, GEMINI_KEY_4, GEMINI_KEY_5 } from '@env';
 
 // --- CONFIGURATION ---
-const GEMINI_API_KEYS = [];
 
+const GEMINI_API_KEYS = [GEMINI_KEY_1, GEMINI_KEY_2, GEMINI_KEY_3, GEMINI_KEY_4, GEMINI_KEY_5];
 const COUNTRIES = [
   { id: 'PK', name: 'Pakistan', currency: 'PKR', symbol: 'Rs.', lang: 'Urdu/Hindi/English mix', example: '"100 rupay ki chaye bechi" or "Ali ko 500 diye"' },
   { id: 'US', name: 'USA', currency: 'USD', symbol: '$', lang: 'English', example: '"Sold pizza for 15 dollars" or "Paid 10 for gas"' },
